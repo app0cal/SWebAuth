@@ -9,7 +9,17 @@
 
   <h1>Week 28 - The stuffed retiring</h1>
 
-  <h2>Preface – Why I track</h2>
+  <!-- Part II: In-page navigation menu (goes directly under h1) -->
+  <nav>
+    <a href="#preface">Preface</a> |
+    <a href="#overview">Overview</a> |
+    <a href="#gallery">Gallery</a> |
+    <a href="#table">Table</a> |
+    <a href="#coda">Coda</a>
+  </nav>
+
+  <!-- Part I + II: headings/paragraphs + section IDs -->
+  <h2 id="preface">Preface – Why I track</h2>
   <p>
     I started recording what I throw away each week because I realized I don’t notice the moment most objects “end.”
     To elaborate, the meaning behind items don’t disappear when they stop being useful, rather they get pushed back into spots that are forgotten,
@@ -27,8 +37,9 @@
     Creating this miniature blog is another reason why I enjoy sharing it. Knowing that someone might come across the way I discard my items
     and give them what I consider a proper end might encourage them to do the same for objects that don’t deserve to end up in some forgotten corner of a room.
   </p>
+  <p><a href="#">Back to top</a></p>
 
-  <h2>Overview – Patterns I noticed</h2>
+  <h2 id="overview">Overview – Patterns I noticed</h2>
   <p>
     This week of discarding felt like a continuation of the same problem I wrote about in the Preface: objects don’t really “end”
     when they stop being useful. They end when I finally notice them again.
@@ -65,67 +76,94 @@
     The sloth keychain is the most personal example in this group. It used to mean something, but I haven’t used it in a long time and leaving it in a drawer
     felt like the same “pushed back and forgotten” ending that this project is trying to prevent.
   </p>
+  <p><a href="#">Back to top</a></p>
 
-  <h2>Gallery – The nine items of the week</h2>
+  <h2 id="gallery">Gallery – The nine items of the week</h2>
 
-  <h3>Dinosaur Plushie Squished</h3>
-  <img id="img1" src="img1.jpg" alt="Dinosaur Plushie Squished" />
-  <p>Worn and torn now; no longer comforting to keep around.</p>
+  <!-- Requirement: Ordered list (ol) -->
+  <ol>
+    <li>
+      <h3>Dinosaur Plushie Squished</h3>
+      <!-- Path fix: from /SWebAuth/twp/ to /SWebAuth/images/ -->
+      <img id="img1" src="../images/img1.jpg" alt="Dinosaur Plushie Squished" />
+      <p>Worn and torn now; no longer comforting to keep around.</p>
+    </li>
 
-  <h3>Alien Dog Plush</h3>
-  <img id="img2" src="img2.jpg" alt="Alien Dog Plush" />
-  <p>Too large for my space; it became storage more than something I enjoyed.</p>
+    <li>
+      <h3>Alien Dog Plush</h3>
+      <img id="img2" src="../images/img2.jpg" alt="Alien Dog Plush" />
+      <p>Too large for my space; it became storage more than something I enjoyed.</p>
+    </li>
 
-  <h3>Universe Cat Print (Glossy)</h3>
-  <img id="img3" src="img3.jpg" alt="Universe Cat Print (Glossy)" />
-  <p> Aesthetic phase; doesn’t match what I want displayed anymore.</p>
+    <li>
+      <h3>Universe Cat Print (Glossy)</h3>
+      <img id="img3" src="../images/img3.jpg" alt="Universe Cat Print (Glossy)" />
+      <p> Aesthetic phase; doesn’t match what I want displayed anymore.</p>
+    </li>
 
-  <h3>Gymreaper Wrist Wraps</h3>
-  <img id="img4" src="img4.jpg" alt="Gymreaper Wrist Wraps" />
-  <p>Stretched out; no longer supportive.</p>
+    <li>
+      <h3>Gymreaper Wrist Wraps</h3>
+      <img id="img4" src="../images/img4.jpg" alt="Gymreaper Wrist Wraps" />
+      <p>Stretched out; no longer supportive.</p>
+    </li>
 
-  <h3>Empty Creatine Tub</h3>
-  <img id="img5" src="img5.jpg" alt="Empty Creatine Tub" />
-  <p>Finished; keeping the container was just taking up space.</p>
+    <li>
+      <h3>Empty Creatine Tub</h3>
+      <img id="img5" src="../images/img5.jpg" alt="Empty Creatine Tub" />
+      <p>Finished; keeping the container was just taking up space.</p>
+    </li>
 
-  <h3>Can Opener</h3>
-  <img id="img6" src="img6.jpg" alt="Can Opener" />
-  <p>Replaced with a better one; redundant.</p>
+    <li>
+      <h3>Can Opener</h3>
+      <img id="img6" src="../images/img6.jpg" alt="Can Opener" />
+      <p>Replaced with a better one; redundant.</p>
+    </li>
 
-  <h3>Empty Cologne</h3>
-  <img id="img7" src="img7.jpg" alt="Empty Cologne" />
-  <p>Finished; I’d rather keep space for items I use.</p>
+    <li>
+      <h3>Empty Cologne</h3>
+      <img id="img7" src="../images/img7.jpg" alt="Empty Cologne" />
+      <p>Finished; I’d rather keep space for items I use.</p>
+    </li>
 
-  <h3>Sloth Keychain</h3>
-  <img id="img8" src="img8.jpg" alt="Sloth Keychain" />
-  <p>Used to mean something, but I haven’t used it in a long time.</p>
+    <li>
+      <h3>Sloth Keychain</h3>
+      <img id="img8" src="../images/img8.jpg" alt="Sloth Keychain" />
+      <p>Used to mean something, but I haven’t used it in a long time.</p>
+    </li>
 
-  <h3>Broken Charger</h3>
-  <img id="img9" src="img9.jpg" alt="Broken Charger" />
-  <p>Stopped working; no reason to keep it.</p>
+    <li>
+      <h3>Broken Charger</h3>
+      <img id="img9" src="../images/img9.jpg" alt="Broken Charger" />
+      <p>Stopped working; no reason to keep it.</p>
+    </li>
+  </ol>
 
-  <h2>Interesting Facts</h2>
-  <p>
-    These are just a few quick facts that connect this week’s items to bigger stuff like materials and disposal.
-    I’m keeping this part simple so it doesn’t feel like a random info dump.
-  </p>
+  <p><a href="#">Back to top</a></p>
 
-  <h3>Most plushies are stuffed with synthetic filling</h3>
-  <p>
-    Stuffed animals are commonly filled with
-    <a href="https://en.wikipedia.org/wiki/Polyester_fiberfill" target="_blank" rel="noopener">polyester fiberfill</a>,
-    which is basically synthetic stuffing that can compress over time. Notable, because sometimes the synthetic filling 
-	really be recycled like you want it to be. (<a href="https://en.wikipedia.org/wiki/Polyester_fiberfill" target="_blank" rel="noopener">Source</a>)
-  </p>
+  <h2 id="table">Table of Item Data</h2>
+  <p>To be added...</p>
+  <ul>
+    <li>More facts will be added here later.</li>
+    <li>This is just a placeholder list for now.</li>
+  </ul>
 
-  <h3>Chargers are considered e-waste when they’re trashed</h3>
-  <p>
-    Cables and chargers count as
-    <a href="https://en.wikipedia.org/wiki/Electronic_waste" target="_blank" rel="noopener">electronic waste</a>
-    when you get rid of them, which is why e-waste drop-offs exist in the first place. (<a href="https://en.wikipedia.org/wiki/Electronic_waste" target="_blank" rel="noopener">Source</a>)
-  </p>
+  <!-- Empty table placeholder (table element included as required) -->
+  <table border="1">
+    <tr>
+      <th>Item</th>
+      <th>Weight</th>
+      <th>Cost</th>
+      <th>How acquired</th>
+      <th>Location kept</th>
+      <th>Time owned</th>
+      <th>Mode of disposal</th>
+      <th>Material</th>
+    </tr>
+  </table>
 
-  <h2>Coda - Final thoughts</h2>
+  <p><a href="#">Back to top</a></p>
+
+  <h2 id="coda">Coda - Final thoughts</h2>
   <p>
     This week felt like clearing out the quiet leftover things I didn’t dislike enough to throw away immediately but also didn’t actively choose to keep.
     Putting them into a single gallery makes it obvious how often “future use” is just a way of postponing a decision.
@@ -133,6 +171,12 @@
   <p>
     Next week, I want to pay attention to what gets discarded without any hesitation versus what I keep negotiating with myself about.
     If you’ve been documenting your own weekly clutter or have thoughts about what counts as “waste,” feel free to share them.
+  </p>
+  <p><a href="#">Back to top</a></p>
+
+  <p>
+    More on the idea of “waste” as a concept:
+    <a href="https://en.wikipedia.org/wiki/Waste" target="_blank" rel="noopener">Wikipedia: Waste</a>
   </p>
 
 </body>
