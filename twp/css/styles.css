@@ -1,14 +1,12 @@
-/* ========== Cozy Latte (Centered card + matching side background) ========== */
-
 :root{
   --bg: #e8d9c9;
-  --card: #fbf3e7;      /* CHANGED: creamy card instead of bright white */
+  --card: #fbf3e7;
   --border: #d6bfa9;
   --nav-bg: #3b2416;
   --nav-text: #fff7ee;
   --link: #8b4513;
   --link-hover: #6f3410;
-  --focus: #e7c7a6;     /* CHANGED: creamy focus instead of harsh/bright */
+  --focus: #e7c7a6;
 }
 
 *{ box-sizing: border-box; }
@@ -21,16 +19,13 @@ body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 1.7;
-
-  padding: 0;     /* CHANGED: removes space above header */
+  padding: 0;
 }
 
-
-/* ===== Site header + site nav ===== */
 .site-header{
   background: var(--nav-bg);
   color: var(--nav-text);
-  padding: 10px 16px;   /* CHANGED: smaller header padding */
+  padding: 10px 16px;
   margin-bottom: 0;
 }
 
@@ -38,7 +33,7 @@ body{
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  gap: 10px;            /* CHANGED */
+  gap: 10px;
   flex-wrap: wrap;
   align-items: center;
 }
@@ -46,36 +41,32 @@ body{
 .site-nav a{
   color: var(--nav-text);
   text-decoration: none;
-  padding: 6px 10px;    /* CHANGED: smaller buttons */
-  border-radius: 8px;   /* CHANGED: less pill */
+  padding: 6px 10px;
+  border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.18);
-  font-size: 0.95rem;   /* CHANGED: slightly smaller text */
+  font-size: 0.95rem;
 }
 
 .site-nav a:hover{
   border-color: rgba(255,255,255,0.4);
 }
 
-/* ===== Wrapper (centered main content) ===== */
-/* Centered “main paper/card” */
 .wrapper{
   max-width: 1000px;
-  margin: 0 auto 60px;            /* CHANGED: no big top spacing from header */
+  margin: 0 auto 60px;
   padding: 22px 18px;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 0;               /* CHANGED: remove rounding */
-  box-shadow: none;               /* CHANGED: remove shadow (cleaner) */
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* ===== Headings + spacing ===== */
 h1{
-  background: #f2e2d2;        /* light mocha highlight */
+  background: #f2e2d2;
   padding: 14px 16px;
   border: 1px solid var(--border);
-  border-radius: 8px;         /* set to 0 if you want sharp edges */
-  margin: 12px 0 14px;
-  margin-top: 0;
+  border-radius: 8px;
+  margin: 0 0 14px;
 }
 
 h2{
@@ -92,7 +83,6 @@ p{ margin: 0 0 14px; }
 p, li{ color: var(--text); }
 .muted{ color: var(--muted); }
 
-/* ===== Page nav (under h1) ===== */
 .page-nav,
 .wrapper > nav{
   background: #fffdf8;
@@ -102,7 +92,6 @@ p, li{ color: var(--text); }
   margin: 10px 0 18px;
 }
 
-/* ===== Links ===== */
 a{
   color: var(--link);
   text-decoration: underline;
@@ -117,31 +106,26 @@ a:focus-visible{
   border-radius: 6px;
 }
 
-/* ===== Lists ===== */
 ul, ol{
   padding-left: 1.25rem;
   margin: 0 0 16px;
 }
 
-/* ===== Gallery cards ===== */
-/* CHANGED: fixed typo: ool -> ol */
 ol > li{
-  background: transparent;  /* removes white card */
-  border: 0;                /* removes outline */
-  padding: 0;               /* optional */
-  margin: 14px 0 18px;      /* keep spacing */
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 14px 0 18px;
 }
 
-/* ===== Images ===== */
 img{
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: 0;     /* squared edges */
+  border-radius: 0;
   border: 0;
 }
 
-/* ===== Tables ===== */
 table{
   width: 100%;
   border-collapse: collapse;
