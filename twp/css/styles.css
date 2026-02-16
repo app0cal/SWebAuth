@@ -1,0 +1,161 @@
+/* ========== Cozy Latte (Centered card + matching side background) ========== */
+
+:root{
+  --bg: #e8d9c9;
+  --card: #fbf3e7;      /* CHANGED: creamy card instead of bright white */
+  --border: #d6bfa9;
+  --nav-bg: #3b2416;
+  --nav-text: #fff7ee;
+  --link: #8b4513;
+  --link-hover: #6f3410;
+  --focus: #e7c7a6;     /* CHANGED: creamy focus instead of harsh/bright */
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+
+  padding: 0;     /* CHANGED: removes space above header */
+}
+
+
+/* ===== Site header + site nav ===== */
+.site-header{
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  padding: 10px 16px;   /* CHANGED: smaller header padding */
+  margin-bottom: 0;
+}
+
+.site-nav{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;            /* CHANGED */
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.site-nav a{
+  color: var(--nav-text);
+  text-decoration: none;
+  padding: 6px 10px;    /* CHANGED: smaller buttons */
+  border-radius: 8px;   /* CHANGED: less pill */
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 0.95rem;   /* CHANGED: slightly smaller text */
+}
+
+.site-nav a:hover{
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* ===== Wrapper (centered main content) ===== */
+/* Centered “main paper/card” */
+.wrapper{
+  max-width: 1000px;
+  margin: 0 auto 60px;            /* CHANGED: no big top spacing from header */
+  padding: 22px 18px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0;               /* CHANGED: remove rounding */
+  box-shadow: none;               /* CHANGED: remove shadow (cleaner) */
+}
+
+/* ===== Headings + spacing ===== */
+h1{
+  background: #f2e2d2;        /* light mocha highlight */
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;         /* set to 0 if you want sharp edges */
+  margin: 12px 0 14px;
+  margin-top: 0;
+}
+
+h2{
+  font-size: 1.45rem;
+  margin: 30px 0 10px;
+}
+
+h3{
+  font-size: 1.15rem;
+  margin: 18px 0 8px;
+}
+
+p{ margin: 0 0 14px; }
+p, li{ color: var(--text); }
+.muted{ color: var(--muted); }
+
+/* ===== Page nav (under h1) ===== */
+.page-nav,
+.wrapper > nav{
+  background: #fffdf8;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  margin: 10px 0 18px;
+}
+
+/* ===== Links ===== */
+a{
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover{ color: var(--link-hover); }
+
+a:focus-visible{
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ===== Lists ===== */
+ul, ol{
+  padding-left: 1.25rem;
+  margin: 0 0 16px;
+}
+
+/* ===== Gallery cards ===== */
+/* CHANGED: fixed typo: ool -> ol */
+ol > li{
+  background: transparent;  /* removes white card */
+  border: 0;                /* removes outline */
+  padding: 0;               /* optional */
+  margin: 14px 0 18px;      /* keep spacing */
+}
+
+/* ===== Images ===== */
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;     /* squared edges */
+  border: 0;
+}
+
+/* ===== Tables ===== */
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 22px;
+  font-size: 0.98rem;
+}
+
+th, td{
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th{
+  text-align: left;
+  background: #efe2d6;
+}
