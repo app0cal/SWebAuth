@@ -94,6 +94,56 @@ footer {
     color: white;
 }
 
+.review-nav {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.review-nav a {
+    color: #222222;
+    margin: 0 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.review-nav a:hover {
+    text-decoration: underline;
+}
+
+.reviews-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.reviews-layout article {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+}
+
+.reviews-layout img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.site-logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.site-logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 @media (max-width: 900px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);

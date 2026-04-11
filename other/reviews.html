@@ -3,15 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <title>Reviews</title>
+<link rel="stylesheet" href="css/reviews.css">
 </head>
 
-<body>
-	<nav>
-		<a href="#rev_1">Review 1</a>
-		<a href="#rev_2">Review 2</a>
-	</nav>
+<header class="site-header">
+    <a href="index.html" class="site-logo">
+      <img src="../images/other-logo.svg">
+    </a>
 
-	<main>
+    <nav class="site-nav">
+        <a href="reviews.html">Reviews</a>
+        <a href="inventory.html">Pictorial</a>
+        <a href="map.html">Map</a>
+        <a href="feature.html">Feature</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<body>
+  <nav class="review-nav">
+      <a href="#rev_1">Review 1</a>
+      <a href="#rev_2">Review 2</a>
+  </nav>
+
+	<main class = "reviews-layout">
 		<article id="rev_1">
 			<h1>A Solid Gym Bar for Most Lifters: The LA Fitness Olympic Bar Review</h1>
 			<img src="../images/bar-real.jpg" width="300" height="300" alt="Olympic Bar at LA Fitness">
@@ -171,5 +186,8 @@
 			<a href="#">Back to Top</a>
 		</article>
 	</main>
+  <footer class="site-footer">
+    <p>© Lifter Association, 2026</p>
+  </footer>
 </body>
 </html>
