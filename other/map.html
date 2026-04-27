@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Map</title>
+    <link rel="stylesheet" href="css/map.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="site-logo">
+            <img src="../images/other-logo.svg" alt="Lifter Association logo">
+        </a>
+
+        <nav class="site-nav">
+            <a href="reviews.html">Reviews</a>
+            <a href="inventory.html">Pictorial</a>
+            <a href="map.html">Map</a>
+            <a href="feature.html">Feature</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main class="map-page">
+        <section class="map-intro">
+            <h1>Gym Map</h1>
+            <p>
+                This map marks some of the main spaces in the gym that matter most for bodybuilding.
+                The locations are split into two categories: training areas and support areas.
+                Training areas are the places where the main lifts and exercises happen, while support
+                areas are the places tied to tracking, recovery, or preparation. The markers link down
+                to location profiles below, which explain why each spot matters and what kind of role
+                it plays in the gym overall.
+            </p>
+        </section>
+
+        <section class="map-wrapper">
+            <h2>Interactive Map</h2>
+
+            <div class="gymmap">
+                <img src="images/map2.png" alt="Map of gym layout">
+
+                <a href="#squat-profile" class="map-marker training" id="marker-squat">
+                    <span class="popup">Squat Rack</span>
+                </a>
+
+                <a href="#bench-profile" class="map-marker training" id="marker-bench">
+                    <span class="popup">Bench Area</span>
+                </a>
+
+                <a href="#dumbbell-profile" class="map-marker training" id="marker-basketball">
+                    <span class="popup">Basketball Court</span>
+                </a>
+
+                <a href="#cable-profile" class="map-marker training" id="marker-cable">
+                    <span class="popup">Cable Machine</span>
+                </a>
+
+                <a href="#cardio-profile" class="map-marker training" id="marker-deadlift">
+                    <span class="popup">Deadlifting Area</span>
+                </a>
+
+                <a href="#scale-profile" class="map-marker support" id="marker-scale">
+                    <span class="popup">Scale</span>
+                </a>
+
+                <a href="#recovery-profile" class="map-marker support" id="marker-posing">
+                    <span class="popup">Posing Roomy</span>
+                </a>
+                <a href="#juice-bar" class="map-marker support" id="marker-juicebar">
+                    <span class="popup">Juice Bar</span>
+                </a>
+            </div>
+
+            <div class="map-legend">
+                <h3>Map Legend</h3>
+                <p><span class="legend training-key"></span> Training Area</p>
+                <p><span class="legend support-key"></span> Support / Utility Area</p>
+                <p><spam class="legend recommendation-key"> Personal Recommendation</spam></p>
+            </div>
+        </section>
+
+        <section class="location-profiles">
+            <h2>Location Profiles</h2>
+
+            <article id="squat-profile" class="profile-card">
+                <h3>Squat Rack</h3>
+                <img src="../images/map-squat.jpg" alt="Squat rack area in the gym">
+                <p>
+                    The squat rack is one of the main bodybuilding spaces in the gym because it is used
+                    for squats, overhead press, and other rack-based lifts.
+                </p>
+                <ul>
+                    <li>Category: Training Area</li>
+                    <li>Main use: Lower-body compounds</li>
+                    <li>Typical data tracked: working weight, reps, sets</li>
+                    <li>Importance: ★★★★★</li>
+                </ul>
+            </article>
+
+            <article id="bench-profile" class="profile-card">
+                <h3>Bench Area</h3>
+                <img src="../images/map-bench.jpg" alt="Bench press area in the gym">
+                <p>
+                    The bench area is important for chest training and upper-body pressing work,
+                    especially bench press and incline variations.
+                </p>
+                <ul>
+                    <li>Category: Training Area</li>
+                    <li>Main use: Chest and pressing movements</li>
+                    <li>Typical data tracked: bench PR, working sets, frequency</li>
+                    <li>Importance: ★★★★★</li>
+                </ul>
+            </article>
+
+            <article id="dumbbell-profile" class="profile-card">
+                <h3>Dumbbell Area</h3>
+                <img src="../images/map-dumbbell.jpg" alt="Dumbbell rack in the gym">
+                <p>
+                    The dumbbell area supports a wide range of bodybuilding movements and is one of the
+                    most flexible spaces for accessory lifts.
+                </p>
+                <ul>
+                    <li>Category: Training Area</li>
+                    <li>Main use: Accessory and unilateral work</li>
+                    <li>Typical data tracked: top set weight, rep range</li>
+                    <li>Importance: ★★★★☆</li>
+                </ul>
+            </article>
+
+            <article id="cable-profile" class="profile-card">
+                <h3>Cable Machine</h3>
+                <img src="../images/map-cable.jpg" alt="Cable machine in the gym">
+                <p>
+                    The cable machine is useful for more controlled bodybuilding movements and lets you
+                    target muscles from multiple angles.
+                </p>
+                <ul>
+                    <li>Category: Training Area</li>
+                    <li>Main use: Isolation work</li>
+                    <li>Typical data tracked: pin setting, sets, reps</li>
+                    <li>Importance: ★★★★☆</li>
+                </ul>
+            </article>
+
+            <article id="cardio-profile" class="profile-card">
+                <h3>Cardio Area</h3>
+                <img src="../images/map-cardio.jpg" alt="Cardio area in the gym">
+                <p>
+                    The cardio area matters most during cutting phases when conditioning, calorie burn,
+                    and recovery planning start to matter more.
+                </p>
+                <ul>
+                    <li>Category: Training Area</li>
+                    <li>Main use: Conditioning and calorie expenditure</li>
+                    <li>Typical data tracked: time, calories, intensity</li>
+                    <li>Importance: ★★★☆☆</li>
+                </ul>
+            </article>
+
+            <article id="scale-profile" class="profile-card">
+                <h3>Scale</h3>
+                <img src="../images/map-scale.jpg" alt="Scale area in the gym">
+                <p>
+                    The scale is part of the support side of bodybuilding because it is tied to tracking
+                    body weight during bulks, cuts, and maintenance phases.
+                </p>
+                <ul>
+                    <li>Category: Support / Utility Area</li>
+                    <li>Main use: Tracking body weight</li>
+                    <li>Typical data tracked: weight changes over time</li>
+                    <li>Importance: ★★★★☆</li>
+                </ul>
+            </article>
+
+            <article id="recovery-profile" class="profile-card">
+                <h3>Recovery / Utility Area</h3>
+                <img src="../images/map-recovery.jpg" alt="Recovery or utility area in the gym">
+                <p>
+                    This area represents the side of the gym tied to preparation and recovery, such as
+                    stretching, regrouping between sets, or using support equipment.
+                </p>
+                <ul>
+                    <li>Category: Support / Utility Area</li>
+                    <li>Main use: Recovery and preparation</li>
+                    <li>Typical data tracked: rest time, mobility work</li>
+                    <li>Importance: ★★★☆☆</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="rating-legend">
+            <h2>Rating Legend</h2>
+            <p>★★★★★ = Most important or useful</p>
+            <p>★★★★☆ = Very important or useful</p>
+            <p>★★★☆☆ = Moderately important or useful</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© Lifter Association, 2026</p>
+    </footer>
+</body>
+</html>

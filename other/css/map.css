@@ -1,0 +1,232 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e6e6e6;
+    color: #222222;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.site-header {
+    background-color: #1f1f1f;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.site-logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.site-logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.site-nav {
+    margin-top: 10px;
+}
+
+.site-nav a {
+    color: #f0d36d;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.site-nav a:hover {
+    text-decoration: underline;
+}
+
+.map-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.map-intro,
+.map-wrapper,
+.location-profiles,
+.rating-legend {
+    background-color: #f2f2f2;
+    border: 1px solid #bdbdbd;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+    font-family: "Merriweather", Georgia, serif;
+}
+
+p {
+    font-family: "Lora", Georgia, serif;
+}
+
+.map-wrapper h2,
+.location-profiles h2,
+.rating-legend h2,
+.map-intro h1 {
+    margin-top: 0;
+}
+
+.gymmap {
+    width: 900px;
+    max-width: 100%;
+    margin: 20px auto;
+    position: relative;
+    border: 1px solid #999999;
+    background-color: #f8f8f8;
+}
+
+.gymmap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map-marker {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    border: 2px solid #111111;
+}
+
+.training {
+    background-color: #d64545;
+}
+
+.support {
+    background-color: #3f7ccf;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 24px;
+    background-color: #fff4c4;
+    color: #111111;
+    padding: 4px 6px;
+    border: 1px solid #999999;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.map-marker:hover .popup {
+    display: inline-block;
+}
+
+/* Set of markers for Training Area */
+#marker-squat {
+    top: 140px;
+    right: 140px;
+}
+
+#marker-bench {
+    top: 350px;
+    left: 500px;
+}
+
+#marker-basketball {
+    top: 220px;
+    left: 80px;
+}
+
+#marker-cable {
+    bottom: 450px;
+    left: 560px;
+}
+
+#marker-deadlift {
+    top: 220px;
+    right: 90px;
+}
+
+#marker-scale {
+    bottom: 320px;
+    left: 615px;
+}
+
+#marker-posing {
+    top: 730px;
+    right: 320px;
+}
+
+#marker-juicebar{
+    bottom: 180px;
+    right: 175px;
+}
+
+/* Set of markers for Support / Utility Areas */
+
+
+/* Set of markers for Personal Commendation  */
+
+.map-legend {
+    margin-top: 20px;
+}
+
+.map-legend p {
+    margin: 8px 0;
+}
+
+.legend {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #111111;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.training-key {
+    background-color: #d64545;
+}
+
+.support-key {
+    background-color: #3f7ccf;
+}
+
+.location-profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+}
+
+.profile-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.profile-card ul {
+    padding-left: 20px;
+}
+
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .location-profiles {
+        grid-template-columns: 1fr;
+    }
+}
