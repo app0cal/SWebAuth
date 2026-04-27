@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait of Ivy Park</title>
+  <desc id="desc">A stylized editorial portrait of a contributor with cool archival colors.</desc>
+  <rect width="400" height="400" fill="#e8eceb"/>
+  <rect x="50" y="50" width="300" height="300" rx="26" fill="#6d8b8b"/>
+  <circle cx="200" cy="150" r="72" fill="#efc6ab"/>
+  <path d="M109 147c4-63 41-101 91-101 54 0 90 39 94 103-14-10-32-18-47-19-14-1-23 2-39 10-10 4-20 7-31 6-22-3-42 3-68 1z" fill="#312828"/>
+  <path d="M111 324c20-70 61-101 88-101 31 0 70 32 90 101" fill="#33465f"/>
+  <circle cx="172" cy="153" r="6" fill="#2d2623"/>
+  <circle cx="228" cy="153" r="6" fill="#2d2623"/>
+  <path d="M179 186c11 9 30 9 42 0" stroke="#9c5f61" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

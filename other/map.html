@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Map</title>
     <link rel="stylesheet" href="css/map.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
@@ -30,12 +29,11 @@
         <section class="map-intro">
             <h1>Gym Map</h1>
             <p>
-                This map marks some of the main spaces in the gym that matter most for bodybuilding.
-                The locations are split into two categories: training areas and support areas.
+                This map marks seven of the main spaces in the gym that matter most for bodybuilding.
+                The locations are organized into two categories: training areas and support areas.
                 Training areas are the places where the main lifts and exercises happen, while support
-                areas are the places tied to tracking, recovery, or preparation. The markers link down
-                to location profiles below, which explain why each spot matters and what kind of role
-                it plays in the gym overall.
+                areas focus on tracking, setup, and recovery. Each marker opens to a short popup and links
+                down to a fuller location profile below.
             </p>
         </section>
 
@@ -43,167 +41,295 @@
             <h2>Interactive Map</h2>
 
             <div class="gymmap">
-                <img src="images/map2.png" alt="Map of gym layout">
+                <img src="images/map2.png" alt="Map of gym layout with bodybuilding-related stations marked">
 
-                <a href="#squat-profile" class="map-marker training" id="marker-squat">
-                    <span class="popup">Squat Rack</span>
+                <a href="#squat-profile" class="map-marker training" id="marker-squat" aria-label="Squat rack location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <rect x="4" y="22" width="40" height="4" rx="2"></rect>
+                            <rect x="6" y="15" width="3" height="18" rx="1"></rect>
+                            <rect x="10" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="15" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="30" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="34" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="39" y="15" width="3" height="18" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Squat Rack</strong>Main lower-body compound station</span>
                 </a>
 
-                <a href="#bench-profile" class="map-marker training" id="marker-bench">
-                    <span class="popup">Bench Area</span>
+                <a href="#bench-profile" class="map-marker training" id="marker-bench" aria-label="Bench area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <rect x="4" y="22" width="40" height="4" rx="2"></rect>
+                            <rect x="6" y="15" width="3" height="18" rx="1"></rect>
+                            <rect x="10" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="15" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="30" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="34" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="39" y="15" width="3" height="18" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Bench Area</strong>Primary chest and pressing zone</span>
                 </a>
 
-                <a href="#dumbbell-profile" class="map-marker training" id="marker-basketball">
-                    <span class="popup">Basketball Court</span>
+                <a href="#weights-profile" class="map-marker training" id="marker-weights" aria-label="Free weights area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <rect x="4" y="22" width="40" height="4" rx="2"></rect>
+                            <rect x="6" y="15" width="3" height="18" rx="1"></rect>
+                            <rect x="10" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="15" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="30" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="34" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="39" y="15" width="3" height="18" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Free Weights</strong>Flexible accessory training space</span>
                 </a>
 
-                <a href="#cable-profile" class="map-marker training" id="marker-cable">
-                    <span class="popup">Cable Machine</span>
+                <a href="#cable-profile" class="map-marker training" id="marker-cable" aria-label="Cable machine location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <rect x="4" y="22" width="40" height="4" rx="2"></rect>
+                            <rect x="6" y="15" width="3" height="18" rx="1"></rect>
+                            <rect x="10" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="15" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="30" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="34" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="39" y="15" width="3" height="18" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Cable Machine</strong>Controlled isolation and angle work</span>
                 </a>
 
-                <a href="#cardio-profile" class="map-marker training" id="marker-deadlift">
-                    <span class="popup">Deadlifting Area</span>
+                <a href="#cardio-profile" class="map-marker training" id="marker-cardio" aria-label="Cardio area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <rect x="4" y="22" width="40" height="4" rx="2"></rect>
+                            <rect x="6" y="15" width="3" height="18" rx="1"></rect>
+                            <rect x="10" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="15" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="30" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="34" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="39" y="15" width="3" height="18" rx="1"></rect>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Cardio Area</strong>Conditioning during cutting phases</span>
                 </a>
 
-                <a href="#scale-profile" class="map-marker support" id="marker-scale">
-                    <span class="popup">Scale</span>
+                <a href="#scale-profile" class="map-marker support" id="marker-scale" aria-label="Scale station location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="27" r="13"></circle>
+                            <rect x="20" y="6" width="8" height="6" rx="2"></rect>
+                            <rect x="29" y="9" width="5" height="3" rx="1"></rect>
+                            <path d="M24 27 L24 20" stroke-width="4" stroke-linecap="round" fill="none"></path>
+                            <path d="M24 27 L30 30" stroke-width="4" stroke-linecap="round" fill="none"></path>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Scale Station</strong>Body-weight tracking checkpoint</span>
                 </a>
 
-                <a href="#recovery-profile" class="map-marker support" id="marker-posing">
-                    <span class="popup">Posing Roomy</span>
+                <a href="#recovery-profile" class="map-marker support" id="marker-recovery" aria-label="Recovery and posing area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="27" r="13"></circle>
+                            <rect x="20" y="6" width="8" height="6" rx="2"></rect>
+                            <rect x="29" y="9" width="5" height="3" rx="1"></rect>
+                            <path d="M24 27 L24 20" stroke-width="4" stroke-linecap="round" fill="none"></path>
+                            <path d="M24 27 L30 30" stroke-width="4" stroke-linecap="round" fill="none"></path>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Recovery / Posing</strong>Preparation and check-in area</span>
                 </a>
-                <a href="#juice-bar" class="map-marker support" id="marker-juicebar">
-                    <span class="popup">Juice Bar</span>
+
+                <a href="#weights-profile" class="map-marker pump" id="marker-pump" aria-label="Best pumps example location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <path d="M18 22h6l3-8c.6-1.6 2.2-2.5 3.8-2 1.5.5 2.4 2 2.1 3.5L31 22h5c2.2 0 4 1.8 4 4 0 .6-.1 1.1-.3 1.6l-3.1 9A4 4 0 0 1 32.8 39H18z"></path>
+                            <rect x="10" y="22" width="7" height="17" rx="2"></rect>
+                            <path d="M31 22l1.5-5.6" fill="none" stroke-width="3" stroke-linecap="round"></path>
+                        </svg>
+                    </span>
+                    <span class="popup"><strong>Best Pump Locatoin 1 </strong>Placeholder while I figure out what to add</span>
                 </a>
             </div>
 
             <div class="map-legend">
                 <h3>Map Legend</h3>
-                <p><span class="legend training-key"></span> Training Area</p>
-                <p><span class="legend support-key"></span> Support / Utility Area</p>
-                <p><spam class="legend recommendation-key"> Personal Recommendation</spam></p>
+                <p>
+                    <span class="legend training-key" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <rect x="4" y="22" width="40" height="4" rx="2"></rect>
+                            <rect x="6" y="15" width="3" height="18" rx="1"></rect>
+                            <rect x="10" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="15" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="30" y="17" width="3" height="14" rx="1"></rect>
+                            <rect x="34" y="12" width="4" height="24" rx="1"></rect>
+                            <rect x="39" y="15" width="3" height="18" rx="1"></rect>
+                        </svg>
+                    </span>
+                    Training Area
+                </p>
+                <p>
+                    <span class="legend support-key" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <circle cx="24" cy="27" r="13"></circle>
+                            <rect x="20" y="6" width="8" height="6" rx="2"></rect>
+                            <rect x="29" y="9" width="5" height="3" rx="1"></rect>
+                            <path d="M24 27 L24 20" stroke-width="4" stroke-linecap="round" fill="none"></path>
+                            <path d="M24 27 L30 30" stroke-width="4" stroke-linecap="round" fill="none"></path>
+                        </svg>
+                    </span>
+                    Support / Utility Area
+                </p>
+                <p>
+                    <span class="legend pump-key" aria-hidden="true">
+                        <svg viewBox="0 0 48 48">
+                            <path d="M18 22h6l3-8c.6-1.6 2.2-2.5 3.8-2 1.5.5 2.4 2 2.1 3.5L31 22h5c2.2 0 4 1.8 4 4 0 .6-.1 1.1-.3 1.6l-3.1 9A4 4 0 0 1 32.8 39H18z"></path>
+                            <rect x="10" y="22" width="7" height="17" rx="2"></rect>
+                            <path d="M31 22l1.5-5.6" fill="none" stroke-width="3" stroke-linecap="round"></path>
+                        </svg>
+                    </span>
+                    Best Pumps Marker
+                </p>
+            </div>
+
+            <div class="map-credits">
+                <h3>Map Credits</h3>
+                <p>
+                    Map image from the project archive. Marker icons are custom inline SVG graphics built
+                    for this page. Location images below reuse existing project and site imagery where needed.
+                </p>
             </div>
         </section>
 
         <section class="location-profiles">
-            <h2>Location Profiles</h2>
+            <div class="section-header">
+                <h2>Location Profiles</h2>
+                <p>
+                    Each profile combines a view of the location with descriptive notes, practical data,
+                    and a bodybuilding value rating.
+                </p>
+            </div>
 
             <article id="squat-profile" class="profile-card">
                 <h3>Squat Rack</h3>
-                <img src="../images/map-squat.jpg" alt="Squat rack area in the gym">
+                <img src="images/squatrack.jpg" alt="Squat rack area in the gym">
                 <p>
-                    The squat rack is one of the main bodybuilding spaces in the gym because it is used
-                    for squats, overhead press, and other rack-based lifts.
+                    The squat rack anchors most lower-body bodybuilding sessions because it supports
+                    squats, overhead press, and other heavy compound work that requires stable setup.
                 </p>
                 <ul>
                     <li>Category: Training Area</li>
-                    <li>Main use: Lower-body compounds</li>
-                    <li>Typical data tracked: working weight, reps, sets</li>
-                    <li>Importance: ★★★★★</li>
+                    <li>Main use: Lower-body compounds and rack-based pressing</li>
+                    <li>Location data: Working weight, reps, sets, and rack height</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span></li>
                 </ul>
             </article>
 
             <article id="bench-profile" class="profile-card">
                 <h3>Bench Area</h3>
-                <img src="../images/map-bench.jpg" alt="Bench press area in the gym">
+                <img src="images/bench1.jpg" alt="Bench press area in the gym">
                 <p>
-                    The bench area is important for chest training and upper-body pressing work,
-                    especially bench press and incline variations.
+                    The bench area is central for chest development and upper-body pressing, especially
+                    flat bench, incline work, and other repeatable pressing movements.
                 </p>
                 <ul>
                     <li>Category: Training Area</li>
-                    <li>Main use: Chest and pressing movements</li>
-                    <li>Typical data tracked: bench PR, working sets, frequency</li>
-                    <li>Importance: ★★★★★</li>
+                    <li>Main use: Chest, triceps, and pressing variations</li>
+                    <li>Location data: Bench PR, working sets, bench angle, and frequency</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span></li>
                 </ul>
             </article>
 
-            <article id="dumbbell-profile" class="profile-card">
-                <h3>Dumbbell Area</h3>
-                <img src="../images/map-dumbbell.jpg" alt="Dumbbell rack in the gym">
+            <article id="weights-profile" class="profile-card">
+                <h3>Free Weights / Dumbbell Area</h3>
+                <img src="images/weights.jpg" alt="Free weights and plates in the gym">
                 <p>
-                    The dumbbell area supports a wide range of bodybuilding movements and is one of the
-                    most flexible spaces for accessory lifts.
+                    The free-weights area supports a huge range of accessory work, unilateral lifts,
+                    and movements that let bodybuilders add volume outside their main compounds.
                 </p>
                 <ul>
                     <li>Category: Training Area</li>
-                    <li>Main use: Accessory and unilateral work</li>
-                    <li>Typical data tracked: top set weight, rep range</li>
-                    <li>Importance: ★★★★☆</li>
+                    <li>Main use: Accessory work, dumbbell pressing, rows, and unilateral training</li>
+                    <li>Location data: Top-set weight, rep range, and exercise rotation</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="4 out of 5 stars">★★★★☆</span></li>
                 </ul>
             </article>
 
             <article id="cable-profile" class="profile-card">
                 <h3>Cable Machine</h3>
-                <img src="../images/map-cable.jpg" alt="Cable machine in the gym">
+                <img src="images/weightballs.jpg" alt="Strength equipment stand-in image for the machine-focused area">
                 <p>
-                    The cable machine is useful for more controlled bodybuilding movements and lets you
-                    target muscles from multiple angles.
+                    The cable machine is useful for controlled bodybuilding movements that target muscles
+                    from multiple angles, especially when form and tension matter more than absolute load.
                 </p>
                 <ul>
                     <li>Category: Training Area</li>
-                    <li>Main use: Isolation work</li>
-                    <li>Typical data tracked: pin setting, sets, reps</li>
-                    <li>Importance: ★★★★☆</li>
+                    <li>Main use: Isolation work and constant-tension movements</li>
+                    <li>Location data: Pin setting, attachment choice, sets, and reps</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="4 out of 5 stars">★★★★☆</span></li>
                 </ul>
             </article>
 
             <article id="cardio-profile" class="profile-card">
                 <h3>Cardio Area</h3>
-                <img src="../images/map-cardio.jpg" alt="Cardio area in the gym">
+                <img src="../images/stairmaster.jpg" alt="Cardio machine area represented by a StairMaster">
                 <p>
-                    The cardio area matters most during cutting phases when conditioning, calorie burn,
-                    and recovery planning start to matter more.
+                    The cardio area matters most during cutting phases when conditioning, calorie
+                    expenditure, and recovery-aware planning become more important.
                 </p>
                 <ul>
                     <li>Category: Training Area</li>
                     <li>Main use: Conditioning and calorie expenditure</li>
-                    <li>Typical data tracked: time, calories, intensity</li>
-                    <li>Importance: ★★★☆☆</li>
+                    <li>Location data: Time, calories, pace, and intensity level</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="3 out of 5 stars">★★★☆☆</span></li>
                 </ul>
             </article>
 
             <article id="scale-profile" class="profile-card">
-                <h3>Scale</h3>
-                <img src="../images/map-scale.jpg" alt="Scale area in the gym">
+                <h3>Scale Station</h3>
+                <img src="images/scale.jpg" alt="Scale area in the gym">
                 <p>
-                    The scale is part of the support side of bodybuilding because it is tied to tracking
-                    body weight during bulks, cuts, and maintenance phases.
+                    The scale station represents the support side of bodybuilding because it helps track
+                    body weight during bulks, cuts, maintenance phases, and weekly check-ins.
                 </p>
                 <ul>
                     <li>Category: Support / Utility Area</li>
-                    <li>Main use: Tracking body weight</li>
-                    <li>Typical data tracked: weight changes over time</li>
-                    <li>Importance: ★★★★☆</li>
+                    <li>Main use: Tracking body weight and trend changes</li>
+                    <li>Location data: Body weight, weekly average, and phase notes</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="4 out of 5 stars">★★★★☆</span></li>
                 </ul>
             </article>
 
             <article id="recovery-profile" class="profile-card">
-                <h3>Recovery / Utility Area</h3>
-                <img src="../images/map-recovery.jpg" alt="Recovery or utility area in the gym">
+                <h3>Recovery / Posing Area</h3>
+                <img class="profile-image-contain" src="images/routine.PNG" alt="Routine chart used as a stand-in for recovery and posing preparation">
                 <p>
-                    This area represents the side of the gym tied to preparation and recovery, such as
-                    stretching, regrouping between sets, or using support equipment.
+                    This support area stands for the preparation and regrouping side of bodybuilding,
+                    including posing checks, rest-time organization, and recovery-minded planning.
                 </p>
                 <ul>
                     <li>Category: Support / Utility Area</li>
-                    <li>Main use: Recovery and preparation</li>
-                    <li>Typical data tracked: rest time, mobility work</li>
-                    <li>Importance: ★★★☆☆</li>
+                    <li>Main use: Recovery, preparation, and visual progress checks</li>
+                    <li>Location data: Rest time, mobility work, posing notes, and training schedule</li>
+                    <li>Bodybuilding Value: <span class="rating-stars" aria-label="3 out of 5 stars">★★★☆☆</span></li>
                 </ul>
             </article>
         </section>
 
         <section class="rating-legend">
             <h2>Rating Legend</h2>
-            <p>★★★★★ = Most important or useful</p>
-            <p>★★★★☆ = Very important or useful</p>
-            <p>★★★☆☆ = Moderately important or useful</p>
+            <p><span class="rating-stars" aria-hidden="true">★★★★★</span> = Essential bodybuilding station or support point</p>
+            <p><span class="rating-stars" aria-hidden="true">★★★★☆</span> = Very useful for regular training and tracking</p>
+            <p><span class="rating-stars" aria-hidden="true">★★★☆☆</span> = Helpful depending on phase, goal, or programming</p>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>© Lifter Association, 2026</p>
+        <p>&copy; Lifter Association, 2026</p>
     </footer>
 </body>
 </html>

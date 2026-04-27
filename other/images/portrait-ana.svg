@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait of Ana Delgado</title>
+  <desc id="desc">A stylized editorial portrait of a contributor with warm colors.</desc>
+  <rect width="400" height="400" fill="#efe4d0"/>
+  <rect x="50" y="50" width="300" height="300" rx="26" fill="#d2a574"/>
+  <circle cx="200" cy="152" r="72" fill="#f2ceb0"/>
+  <path d="M118 140c8-58 43-92 84-92 47 0 84 35 92 92-12-11-28-18-42-18-11 0-21 3-31 8-11 5-25 7-39 6-25-2-46 8-64 20z" fill="#3f2b23"/>
+  <path d="M115 325c14-66 61-101 85-101s71 35 85 101" fill="#6a3d1f"/>
+  <circle cx="172" cy="151" r="6" fill="#2f241b"/>
+  <circle cx="228" cy="151" r="6" fill="#2f241b"/>
+  <path d="M178 184c12 10 32 10 44 0" stroke="#9b5b56" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

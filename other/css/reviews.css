@@ -1,24 +1,39 @@
 @charset "UTF-8";
 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lora:wght@400;500&display=swap");
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #e6e6e6;
-    color: #222222;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    background: #ddd8d0;
+    color: #1f1d1a;
+    font-family: "Lora", Georgia, serif;
+    line-height: 1.7;
 }
 
-header {
+header,
+.site-header {
     background-color: #1f1f1f;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 18px;
 }
 
 header h1 {
     margin: 0 0 10px 0;
     font-size: 2rem;
+}
+
+.site-logo {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.site-logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .site-nav {
@@ -37,23 +52,27 @@ header h1 {
 }
 
 main {
-    max-width: 1100px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 .intro-section,
-.group-section {
-    background-color: white;
-    border: 1px solid #cccccc;
-    padding: 20px;
-    margin-bottom: 30px;
+.group-section,
+.reviews-layout article,
+.home-hero,
+.home-links {
+    background: #f7f1e8;
+    border: 1px solid #b7aa96;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.08);
 }
 
 .intro-section h2,
 .group-section h2 {
     margin-top: 0;
-    border-bottom: 2px solid #dddddd;
+    border-bottom: 2px solid #cebda6;
     padding-bottom: 8px;
 }
 
@@ -70,6 +89,11 @@ main {
 .gallery-item {
     margin: 0;
     text-align: center;
+    background: #fffaf4;
+    border: 1px solid #cebda6;
+    padding: 14px;
+    position: relative;
+    overflow: visible;
 }
 
 .gallery-item img {
@@ -77,17 +101,38 @@ main {
     max-width: 300px;
     height: 220px;
     object-fit: cover;
-    border: 2px solid #999999;
+    border: 3px solid #c8803a;
     display: block;
     margin: 0 auto 10px auto;
-    background-color: #eeeeee;
+    background: #ece4d5;
+}
+
+.gallery-item img.gallery-image-contain {
+    object-fit: contain;
+    padding: 8px;
+}
+
+.gallery-item img.leaderboard-zoom {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: zoom-in;
+}
+
+.gallery-item:hover img.leaderboard-zoom,
+.gallery-item:focus-within img.leaderboard-zoom {
+    transform: scale(2.52);
+    z-index: 20;
+    box-shadow: 0 12px 30px rgba(53, 42, 30, 0.28);
+    background: #fffaf4;
 }
 
 .gallery-item figcaption {
     font-size: 0.95rem;
 }
 
-footer {
+footer,
+.site-footer {
     text-align: center;
     padding: 20px;
     background-color: #1f1f1f;
@@ -96,11 +141,11 @@ footer {
 
 .review-nav {
     text-align: center;
-    padding: 15px 0;
+    padding: 16px 0 0;
 }
 
 .review-nav a {
-    color: #222222;
+    color: #7a4a1b;
     margin: 0 10px;
     font-weight: bold;
     text-decoration: none;
@@ -113,70 +158,118 @@ footer {
 .reviews-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 24px;
     align-items: start;
-    max-width: 1500px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 .reviews-layout article {
-    background-color: #f2f2f2;
-    border: 1px solid #bdbdbd;
-    padding: 20px;
+    background: #f7f1e8;
 }
 
 .reviews-layout img {
     max-width: 100%;
     height: auto;
     display: block;
-}
-
-.site-logo {
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.site-logo img {
-    width: 180px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+    border: 3px solid #c8803a;
+    background: #ece4d5;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    background: #fffaf4;
 }
 
-th, td {
-    border: 1px solid #cccccc;
+th,
+td {
+    border: 1px solid #cebda6;
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #eeeeee;
-}
-
-
-h1 {
+    background: #ece4d5;
+    color: #2a2118;
     font-family: "Merriweather", Georgia, serif;
 }
 
-p {
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    font-family: "Merriweather", Georgia, serif;
+    color: #2a2118;
+}
+
+p,
+li,
+td,
+th,
+figcaption,
+a {
     font-family: "Lora", Georgia, serif;
 }
 
+a {
+    color: #7a4a1b;
+}
+
+a:hover {
+    color: #9a5e25;
+}
+
+.home-page {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.home-hero h1 {
+    margin-bottom: 12px;
+}
+
+.home-links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.home-link-card {
+    background: #fffaf4;
+    border: 1px solid #cebda6;
+    padding: 18px;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.home-link-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(53, 42, 30, 0.1);
+    color: inherit;
+}
+
+.home-link-card h2 {
+    margin-bottom: 8px;
+    color: #7a4a1b;
+}
+
 @media (max-width: 900px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
+    .gallery,
+    .reviews-layout,
+    .home-links-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr;
+    main,
+    .reviews-layout,
+    .home-page {
+        padding: 18px;
     }
 }

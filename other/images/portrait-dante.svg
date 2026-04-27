@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait of Dante Mercer</title>
+  <desc id="desc">A stylized editorial portrait of a contributor with neutral and athletic colors.</desc>
+  <rect width="400" height="400" fill="#e6e1d7"/>
+  <rect x="50" y="50" width="300" height="300" rx="26" fill="#8ea089"/>
+  <circle cx="200" cy="150" r="72" fill="#c98d62"/>
+  <path d="M125 125c12-53 45-83 78-83 40 0 70 20 90 62-23-13-46-17-70-12-16 3-32 4-47-1-14-5-31 8-51 34z" fill="#1f1d1b"/>
+  <path d="M110 326c10-58 41-96 91-104 52 8 82 46 90 104" fill="#3b4e49"/>
+  <circle cx="172" cy="152" r="6" fill="#1f1d1b"/>
+  <circle cx="227" cy="152" r="6" fill="#1f1d1b"/>
+  <path d="M180 187c10 8 29 8 40 0" stroke="#6d3e39" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

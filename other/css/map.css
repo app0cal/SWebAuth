@@ -3,10 +3,10 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #e6e6e6;
-    color: #222222;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    background: #ddd8d0;
+    color: #1f1d1a;
+    font-family: "Lora", Georgia, serif;
+    line-height: 1.7;
 }
 
 .site-header {
@@ -44,26 +44,31 @@ body {
 }
 
 .map-page {
-    max-width: 1400px;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 24px;
 }
 
 .map-intro,
 .map-wrapper,
 .location-profiles,
 .rating-legend {
-    background-color: #f2f2f2;
-    border: 1px solid #bdbdbd;
-    padding: 20px;
-    margin-bottom: 30px;
+    background: #f7f1e8;
+    border: 1px solid #b7aa96;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.08);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Merriweather", Georgia, serif;
+    color: #2a2118;
 }
 
-p {
+p,
+li {
     font-family: "Lora", Georgia, serif;
 }
 
@@ -79,8 +84,9 @@ p {
     max-width: 100%;
     margin: 20px auto;
     position: relative;
-    border: 1px solid #999999;
-    background-color: #f8f8f8;
+    border: 1px solid #cebda6;
+    background: #fffaf4;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.08);
 }
 
 .gymmap img {
@@ -90,40 +96,76 @@ p {
 }
 
 .map-marker {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: block;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
+    border-radius: 50%;
     border: 2px solid #111111;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.map-marker:hover,
+.map-marker:focus-visible {
+    transform: scale(1.06);
 }
 
 .training {
-    background-color: #d64545;
+    background-color: #c65f2f;
 }
 
 .support {
-    background-color: #3f7ccf;
+    background-color: #6d8b8b;
+}
+
+.pump {
+    background-color: #b1467a;
+}
+
+.marker-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+}
+
+.marker-icon svg,
+.legend svg {
+    width: 100%;
+    height: 100%;
+    fill: #ffffff;
+    stroke: #ffffff;
 }
 
 .popup {
     display: none;
     position: absolute;
-    top: -30px;
-    left: 24px;
-    background-color: #fff4c4;
-    color: #111111;
-    padding: 4px 6px;
-    border: 1px solid #999999;
+    top: -78px;
+    left: 28px;
+    min-width: 180px;
+    background: #fffaf4;
+    color: #1f1d1a;
+    padding: 8px 10px;
+    border: 1px solid #cebda6;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.12);
     font-size: 0.85rem;
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.35;
 }
 
-.map-marker:hover .popup {
+.popup strong {
+    display: block;
+    margin-bottom: 2px;
+    font-family: "Merriweather", Georgia, serif;
+}
+
+.map-marker:hover .popup,
+.map-marker:focus-visible .popup {
     display: inline-block;
 }
 
-/* Set of markers for Training Area */
 #marker-squat {
     top: 140px;
     right: 140px;
@@ -134,7 +176,7 @@ p {
     left: 500px;
 }
 
-#marker-basketball {
+#marker-weights {
     top: 220px;
     left: 80px;
 }
@@ -144,7 +186,7 @@ p {
     left: 560px;
 }
 
-#marker-deadlift {
+#marker-cardio {
     top: 220px;
     right: 90px;
 }
@@ -154,33 +196,33 @@ p {
     left: 615px;
 }
 
-#marker-posing {
+#marker-recovery {
     top: 730px;
     right: 320px;
 }
 
-#marker-juicebar{
-    bottom: 180px;
-    right: 175px;
+#marker-pump {
+    top: 300px;
+    left: 610px;
 }
 
-/* Set of markers for Support / Utility Areas */
-
-
-/* Set of markers for Personal Commendation  */
-
-.map-legend {
+.map-legend,
+.map-credits {
     margin-top: 20px;
 }
 
-.map-legend p {
+.map-legend p,
+.map-credits p,
+.rating-legend p {
     margin: 8px 0;
 }
 
 .legend {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     border: 2px solid #111111;
     margin-right: 8px;
@@ -188,11 +230,27 @@ p {
 }
 
 .training-key {
-    background-color: #d64545;
+    background-color: #c65f2f;
 }
 
 .support-key {
-    background-color: #3f7ccf;
+    background-color: #6d8b8b;
+}
+
+.pump-key {
+    background-color: #b1467a;
+}
+
+.section-header {
+    grid-column: 1 / -1;
+}
+
+.section-header h2 {
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    margin-top: 0;
 }
 
 .location-profiles {
@@ -202,20 +260,35 @@ p {
 }
 
 .profile-card {
-    background-color: white;
-    border: 1px solid #cccccc;
+    background: #fffaf4;
+    border: 1px solid #cebda6;
     padding: 20px;
 }
 
 .profile-card img {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
     display: block;
     margin-bottom: 12px;
+    border: 3px solid #c8803a;
+    background: #ece4d5;
+}
+
+.profile-card img.profile-image-contain {
+    object-fit: contain;
+    padding: 10px;
 }
 
 .profile-card ul {
     padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.rating-stars {
+    color: #b7741f;
+    font-weight: bold;
+    letter-spacing: 0.04em;
 }
 
 .site-footer {
@@ -228,5 +301,11 @@ p {
 @media (max-width: 900px) {
     .location-profiles {
         grid-template-columns: 1fr;
+    }
+
+    .popup {
+        left: 0;
+        top: -92px;
+        min-width: 150px;
     }
 }
