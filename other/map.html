@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gym Map</title>
-    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
@@ -43,7 +43,7 @@
             <div class="gymmap">
                 <img src="images/map2.png" alt="Map of gym layout with bodybuilding-related stations marked">
 
-                <a href="#squat-profile" class="map-marker training" id="marker-squat" aria-label="Squat rack location">
+                <a href="#squat-profile" class="map-marker map-marker-labeled training" id="marker-squat" aria-label="Squat rack location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <rect x="4" y="22" width="40" height="4" rx="2"></rect>
@@ -55,10 +55,11 @@
                             <rect x="39" y="15" width="3" height="18" rx="1"></rect>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Squat Rack</span>
                     <span class="popup"><strong>Squat Rack</strong>Main lower-body compound station</span>
                 </a>
 
-                <a href="#bench-profile" class="map-marker training" id="marker-bench" aria-label="Bench area location">
+                <a href="#bench-profile" class="map-marker map-marker-labeled training" id="marker-bench" aria-label="Bench area location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <rect x="4" y="22" width="40" height="4" rx="2"></rect>
@@ -70,10 +71,11 @@
                             <rect x="39" y="15" width="3" height="18" rx="1"></rect>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Bench</span>
                     <span class="popup"><strong>Bench Area</strong>Primary chest and pressing zone</span>
                 </a>
 
-                <a href="#weights-profile" class="map-marker training" id="marker-weights" aria-label="Free weights area location">
+                <a href="#weights-profile" class="map-marker map-marker-labeled training" id="marker-weights" aria-label="Free weights area location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <rect x="4" y="22" width="40" height="4" rx="2"></rect>
@@ -85,10 +87,11 @@
                             <rect x="39" y="15" width="3" height="18" rx="1"></rect>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Court</span>
                     <span class="popup"><strong>Basketball Court</strong>If you see me on the court, run.</span>
                 </a>
 
-                <a href="#cable-profile" class="map-marker training" id="marker-cable" aria-label="Cable machine location">
+                <a href="#cable-profile" class="map-marker map-marker-labeled training" id="marker-cable" aria-label="Cable machine location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <rect x="4" y="22" width="40" height="4" rx="2"></rect>
@@ -100,10 +103,11 @@
                             <rect x="39" y="15" width="3" height="18" rx="1"></rect>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Cable</span>
                     <span class="popup"><strong>Cable Machine</strong>Controlled isolation and angle work</span>
                 </a>
 
-                <a href="#cardio-profile" class="map-marker training" id="marker-cardio" aria-label="Treadmills, Elliptical Machines, Stairmasters, and more!">
+                <a href="#cardio-profile" class="map-marker map-marker-labeled training" id="marker-cardio" aria-label="Treadmills, Elliptical Machines, Stairmasters, and more!">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <rect x="4" y="22" width="40" height="4" rx="2"></rect>
@@ -115,10 +119,11 @@
                             <rect x="39" y="15" width="3" height="18" rx="1"></rect>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Cardio</span>
                     <span class="popup"><strong>Cardio Area</strong>Treadmills, Elliptical Machines, Stairmasters, and more!</span>
                 </a>
 
-                <a href="#cardio-profile" class="map-marker training" id="marker-grass" aria-label="Treadmills, Elliptical Machines, Stairmasters, and more!">
+                <a href="#cardio-profile" class="map-marker map-marker-labeled training" id="marker-grass" aria-label="Treadmills, Elliptical Machines, Stairmasters, and more!">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <rect x="4" y="22" width="40" height="4" rx="2"></rect>
@@ -130,10 +135,11 @@
                             <rect x="39" y="15" width="3" height="18" rx="1"></rect>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Grass</span>
                     <span class="popup"><strong>Fake Grass Area</strong>A flat plane with fake grass, perfect for abs or stretching</span>
                 </a>
 
-                <a href="#scale-profile" class="map-marker support" id="marker-scale" aria-label="Scale station location">
+                <a href="#scale-profile" class="map-marker map-marker-labeled support" id="marker-scale" aria-label="Scale station location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <circle cx="24" cy="27" r="13"></circle>
@@ -143,10 +149,11 @@
                             <path d="M24 27 L30 30" stroke-width="4" stroke-linecap="round" fill="none"></path>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Scale</span>
                     <span class="popup"><strong>Scale Station</strong>Body-weight tracking checkpoint</span>
                 </a>
 
-                <a href="#recovery-profile" class="map-marker support" id="marker-recovery" aria-label="Recovery and posing area location">
+                <a href="#recovery-profile" class="map-marker map-marker-labeled support" id="marker-recovery" aria-label="Recovery and posing area location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <circle cx="24" cy="27" r="13"></circle>
@@ -156,10 +163,11 @@
                             <path d="M24 27 L30 30" stroke-width="4" stroke-linecap="round" fill="none"></path>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Mirrors</span>
                     <span class="popup"><strong>Mirror Room</strong>Large room with mirrors, where pilates classes are help and people pose in</span>
                 </a>
 
-                <a href="#recovery-profile" class="map-marker support" id="marker-juicebar" aria-label="Recovery and posing area location">
+                <a href="#recovery-profile" class="map-marker map-marker-labeled support" id="marker-juicebar" aria-label="Recovery and posing area location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <circle cx="24" cy="27" r="13"></circle>
@@ -169,10 +177,11 @@
                             <path d="M24 27 L30 30" stroke-width="4" stroke-linecap="round" fill="none"></path>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Juice</span>
                     <span class="popup"><strong>Juice Bar</strong>Protein Shakes, Pre-workouts, if it's gym related they have it here :D</span>
                 </a>
 
-                <a href="#weights-profile" class="map-marker pump" id="marker-pump" aria-label="Best pumps example location">
+                <a href="#weights-profile" class="map-marker map-marker-labeled pump" id="marker-pump" aria-label="Best pumps example location">
                     <span class="marker-icon" aria-hidden="true">
                         <svg viewBox="0 0 48 48">
                             <path d="M18 22h6l3-8c.6-1.6 2.2-2.5 3.8-2 1.5.5 2.4 2 2.1 3.5L31 22h5c2.2 0 4 1.8 4 4 0 .6-.1 1.1-.3 1.6l-3.1 9A4 4 0 0 1 32.8 39H18z"></path>
@@ -180,6 +189,7 @@
                             <path d="M31 22l1.5-5.6" fill="none" stroke-width="3" stroke-linecap="round"></path>
                         </svg>
                     </span>
+                    <span class="marker-label marker-label-below">Pump</span>
                     <span class="popup"><strong>Best Pump Locatoin 1 </strong>Placeholder while I figure out what to add</span>
                 </a>
             </div>
