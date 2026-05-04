@@ -233,32 +233,91 @@ th {
 
 .home-hero h1 {
     margin-bottom: 12px;
+    font-size: clamp(2.4rem, 4vw, 4.2rem);
+    line-height: 1.1;
 }
 
-.home-links-grid {
+.home-hero {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    gap: 28px;
+    align-items: center;
+}
+
+.home-hero-copy {
+    max-width: 620px;
+}
+
+.home-hero-secondary {
+    font-size: 1.2rem;
+    color: #7a4a1b;
+    margin-bottom: 18px;
+}
+
+.home-hero-intro {
+    font-size: 1.02rem;
+}
+
+.home-hero-media {
+    margin: 0;
+    background: #fffaf4;
+    border: 1px solid #cebda6;
+    padding: 14px;
+}
+
+.home-hero-media img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #c8803a;
+    background: #ece4d5;
+    margin-bottom: 10px;
+}
+
+.home-hero-media figcaption {
+    font-size: 0.95rem;
+}
+
+.home-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
 }
 
-.home-link-card {
+.home-showcase-card {
     background: #fffaf4;
     border: 1px solid #cebda6;
     padding: 18px;
-    text-decoration: none;
-    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-showcase-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
     display: block;
+    border: 3px solid #c8803a;
+    background: #ece4d5;
+    margin-bottom: 14px;
 }
 
-.home-link-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(53, 42, 30, 0.1);
-    color: inherit;
-}
-
-.home-link-card h2 {
+.home-showcase-card h3 {
     margin-bottom: 8px;
+}
+
+.home-showcase-card h3 a {
     color: #7a4a1b;
+    text-decoration: none;
+}
+
+.home-showcase-card h3 a:hover {
+    text-decoration: underline;
+}
+
+.home-showcase-card p {
+    margin-bottom: 0;
 }
 
 .eyebrow {
@@ -622,6 +681,7 @@ th {
 }
 
 @media (max-width: 920px) {
+    .home-hero,
     .contributors-grid,
     .history-media {
         grid-template-columns: 1fr;
@@ -640,7 +700,7 @@ th {
 @media (max-width: 900px) {
     .gallery,
     .reviews-layout,
-    .home-links-grid,
+    .home-showcase-grid,
     .location-profiles {
         grid-template-columns: 1fr;
     }
@@ -663,5 +723,15 @@ th {
     .map-page,
     .reviews-layout {
         padding: 18px;
+    }
+
+    .site-nav a {
+        display: inline-block;
+        margin: 4px 8px;
+    }
+
+    .home-hero-media img,
+    .home-showcase-card img {
+        height: auto;
     }
 }
