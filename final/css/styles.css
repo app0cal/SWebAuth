@@ -1,0 +1,690 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Lora:wght@400;500;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #ddd8d0;
+    color: #1f1d1a;
+    font-family: "Lora", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #7a3f13;
+    font-weight: 600;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+a:hover,
+a:focus {
+    color: #a9561b;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    color: #2a2118;
+    font-family: "Merriweather", Georgia, serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.site-header {
+    background: #1f1f1f;
+    color: white;
+    padding: 18px 24px 22px;
+    text-align: center;
+}
+
+.site-logo {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.site-logo img {
+    display: block;
+    width: 340px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 20px;
+}
+
+.site-nav a {
+    color: #f0d36d;
+    font-family: "Merriweather", Georgia, serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    color: white;
+    text-decoration: underline;
+}
+
+main,
+.page-shell,
+.home-page,
+.reviews-page,
+.map-page,
+.about-page,
+.essay-page {
+    width: min(960px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0;
+}
+
+.wide-shell {
+    width: min(1080px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0;
+}
+
+.panel,
+.home-hero,
+.home-showcase,
+.intro-section,
+.group-section,
+.review-article,
+.map-intro,
+.map-wrapper,
+.location-profiles,
+.rating-legend,
+.about-hero,
+.contributors-section,
+.history-section,
+.credits-section,
+.essay-intro,
+.essay-section,
+.essay-coda {
+    margin-bottom: 28px;
+    padding: 26px;
+    border: 1px solid #b7aa96;
+    background: #f7f1e8;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.08);
+}
+
+.eyebrow {
+    margin: 0 0 8px;
+    color: #7a4a1b;
+    font-family: "Merriweather", Georgia, serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 22px;
+}
+
+.lead {
+    font-size: 1.12rem;
+    color: #4a3424;
+}
+
+.site-footer {
+    background: #1f1f1f;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+.site-footer p {
+    max-width: 900px;
+    margin: 6px auto;
+    font-size: 0.95rem;
+}
+
+.home-hero {
+    padding: 0;
+    overflow: hidden;
+}
+
+.home-hero-media {
+    margin: 0;
+}
+
+.home-hero-media img {
+    display: block;
+    width: 100%;
+    max-height: 460px;
+    object-fit: cover;
+}
+
+.home-hero-copy {
+    padding: 28px;
+}
+
+.home-hero h1 {
+    margin-bottom: 14px;
+    font-size: 2.8rem;
+}
+
+.home-showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.home-showcase-card,
+.gallery-item,
+.profile-card,
+.contributor-card,
+.timeline-entry,
+.essay-photo,
+.review-sidebar {
+    border: 1px solid #cebda6;
+    background: #fffaf4;
+}
+
+.home-showcase-card {
+    padding: 16px;
+}
+
+.home-showcase-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
+    border: 3px solid #c8803a;
+}
+
+.review-nav,
+.essay-nav {
+    margin-bottom: 22px;
+    padding: 16px;
+    text-align: center;
+    background: #f7f1e8;
+    border: 1px solid #b7aa96;
+}
+
+.review-nav a,
+.essay-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.review-article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 24px;
+    align-items: start;
+}
+
+.review-main img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border: 3px solid #c8803a;
+    background: #ece4d5;
+}
+
+.review-meta {
+    margin-top: -6px;
+    color: #5a4634;
+    font-size: 0.95rem;
+}
+
+.review-sidebar {
+    position: sticky;
+    top: 18px;
+    padding: 18px;
+}
+
+.review-sidebar h3 {
+    margin-bottom: 8px;
+}
+
+.review-sidebar ul {
+    padding-left: 22px;
+}
+
+.rating-icons {
+    color: #9a5e25;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+}
+
+.intro-section h2,
+.group-section h2 {
+    border-bottom: 2px solid #cebda6;
+    padding-bottom: 8px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.gallery-item {
+    margin: 0;
+    padding: 14px;
+    text-align: center;
+    overflow: visible;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+    border: 3px solid #c8803a;
+    background: #ece4d5;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.gallery-item img.gallery-image-contain {
+    object-fit: contain;
+    padding: 8px;
+}
+
+.gallery-item img.leaderboard-zoom {
+    position: relative;
+    z-index: 1;
+    transition: transform 0.45s ease, box-shadow 0.45s ease;
+    cursor: zoom-in;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-within img {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(53, 42, 30, 0.2);
+}
+
+.gallery-item:hover img.leaderboard-zoom,
+.gallery-item:focus-within img.leaderboard-zoom {
+    transform: scale(2.52);
+    z-index: 20;
+    box-shadow: 0 12px 30px rgba(53, 42, 30, 0.28);
+    background: #fffaf4;
+}
+
+.gallery-item figcaption,
+.essay-photo figcaption,
+.home-hero-media figcaption,
+.history-media figcaption {
+    color: #5a4634;
+    font-size: 0.92rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 18px;
+    background: #fffaf4;
+    font-size: 0.95rem;
+}
+
+th,
+td {
+    border: 1px solid #cebda6;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #ece4d5;
+    font-family: "Merriweather", Georgia, serif;
+}
+
+.gymmap {
+    position: relative;
+    width: 900px;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 1px solid #cebda6;
+    background: linear-gradient(135deg, rgba(198, 95, 47, 0.14), rgba(109, 139, 139, 0.12)), #fffaf4;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.08);
+    isolation: isolate;
+}
+
+.gymmap img {
+    display: block;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.map-marker {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.22);
+    text-decoration: none;
+}
+
+.map-marker:hover,
+.map-marker:focus-visible {
+    z-index: 25;
+    transform: scale(1.06);
+}
+
+.training,
+.training-key {
+    background-color: #c65f2f;
+}
+
+.support,
+.support-key {
+    background-color: #6d8b8b;
+}
+
+.pump,
+.pump-key {
+    background-color: #b1467a;
+}
+
+.marker-icon,
+.legend {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.marker-icon svg,
+.legend svg {
+    width: 100%;
+    height: 100%;
+}
+
+.category-icon {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.pump .category-icon,
+.pump-key .category-icon {
+    fill: #fff;
+    stroke: none;
+}
+
+.marker-label {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    z-index: 15;
+    transform: translateX(-50%);
+    padding: 4px 10px;
+    border: 1px solid #b7aa96;
+    border-radius: 999px;
+    background: rgba(247, 241, 232, 0.96);
+    color: #2a2118;
+    font-family: "Merriweather", Georgia, serif;
+    font-size: 0.72rem;
+    line-height: 1.1;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: -78px;
+    left: 28px;
+    z-index: 30;
+    min-width: 180px;
+    padding: 8px 10px;
+    border: 1px solid #cebda6;
+    background: #fffaf4;
+    color: #1f1d1a;
+    box-shadow: 0 6px 18px rgba(53, 42, 30, 0.12);
+    font-size: 0.85rem;
+    line-height: 1.35;
+}
+
+.popup strong {
+    display: block;
+    font-family: "Merriweather", Georgia, serif;
+}
+
+.map-marker:hover .popup,
+.map-marker:focus-visible .popup {
+    display: inline-block;
+}
+
+.map-note {
+    position: absolute;
+    z-index: 10;
+    color: #1f1d1a;
+    font-family: "Merriweather", Georgia, serif;
+    font-size: 0.82rem;
+    line-height: 1.2;
+    text-transform: none;
+    letter-spacing: 0;
+    background: rgba(255, 250, 244, 0.88);
+    padding: 3px 6px;
+}
+
+#marker-squat { top: 11%; right: 16%; }
+#marker-bench { top: 27%; left: 55%; }
+#marker-weights { top: 18%; left: 6%; }
+#marker-cable { bottom: 39%; left: 62%; }
+#marker-cardio { top: 56%; left: 39%; }
+#marker-preacher { top: 4%; left: 35%; }
+#marker-grass { bottom: 26%; left: 31%; }
+#marker-scale { bottom: 27%; left: 68%; }
+#marker-recovery { top: 64%; right: 35%; }
+#marker-pump { top: 24%; left: 67%; }
+#marker-accessory { bottom: 18%; left: 44%; }
+#marker-chestfly { bottom: 20%; left: 55%; }
+#marker-tennis { top: 62.5%; left: 13%; }
+#marker-juicebar { bottom: 15%; right: 19%; }
+
+.map-legend p,
+.map-credits p,
+.rating-legend p {
+    margin: 8px 0;
+}
+
+.legend {
+    width: 34px;
+    height: 34px;
+    margin-right: 8px;
+    border: 2px solid #111;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.location-profiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.section-header {
+    grid-column: 1 / -1;
+}
+
+.profile-card {
+    padding: 18px;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 12px;
+    border: 3px solid #c8803a;
+}
+
+.profile-card img.profile-image-contain {
+    object-fit: contain;
+    padding: 10px;
+}
+
+.contributors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.contributor-card {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.contributor-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 3px solid #c8803a;
+}
+
+.card-title {
+    color: #7a4a1b;
+    font-weight: 700;
+}
+
+.timeline {
+    display: grid;
+    gap: 18px;
+}
+
+.timeline-entry {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 18px;
+    padding: 16px;
+    border-left: 6px solid #7a4a1b;
+}
+
+.timeline-entry img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border: 3px solid #c8803a;
+}
+
+.timeline-year {
+    color: #7a4a1b;
+    font-family: "Merriweather", Georgia, serif;
+    font-size: 1.25rem;
+}
+
+.essay-page {
+    width: min(900px, calc(100% - 32px));
+}
+
+.essay-intro h1 {
+    font-size: 2.7rem;
+}
+
+.essay-section {
+    padding-bottom: 10px;
+}
+
+.essay-photo {
+    margin: 24px 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+@media (max-width: 900px) {
+    .home-showcase-grid,
+    .gallery,
+    .review-article,
+    .location-profiles,
+    .contributors-grid,
+    .timeline-entry {
+        grid-template-columns: 1fr;
+    }
+
+    .review-sidebar {
+        position: static;
+    }
+
+    .marker-label {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: 18px;
+    }
+
+    h1,
+    .home-hero h1,
+    .essay-intro h1 {
+        font-size: 2rem;
+    }
+
+    .panel,
+    .home-hero-copy,
+    .home-showcase,
+    .intro-section,
+    .group-section,
+    .review-article,
+    .map-intro,
+    .map-wrapper,
+    .location-profiles,
+    .rating-legend,
+    .about-hero,
+    .contributors-section,
+    .history-section,
+    .credits-section,
+    .essay-intro,
+    .essay-section,
+    .essay-coda,
+    .site-logo img {
+        width: 260px;
+    }
+}

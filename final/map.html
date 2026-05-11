@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifter Association | Map</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="site-logo">
+            <img src="images/other-logo.svg" alt="Lifter Association logo">
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="reviews.html">Reviews</a>
+            <a href="inventory.html">Pictorial</a>
+            <a href="map.html">Map</a>
+            <a href="visual-essay.html">Visual Essay</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main class="map-page">
+        <section class="map-intro">
+            <p class="eyebrow">Spatial Guide</p>
+            <h1>Gym Map</h1>
+            <p>
+                This map marks the main places in the gym that matter for bodybuilding. Training areas
+                are where the lifting happens; support areas are where tracking, recovery, and routine
+                decisions happen. The map is not meant to replace walking through a real gym, but it helps
+                readers see how a workout moves across space.
+            </p>
+        </section>
+
+        <section class="map-wrapper">
+            <h2>Interactive Map</h2>
+            <div class="gymmap">
+                <img src="images/map2.png" alt="Gym floorplan with training and support markers">
+
+                <a href="#squat-profile" class="map-marker training" id="marker-squat" aria-label="Squat rack location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Squat Rack</span>
+                    <span class="popup"><strong>Squat Rack</strong>Main lower-body compound station.</span>
+                </a>
+                <a href="#weights-profile" class="map-marker training" id="marker-bench" aria-label="Free weight area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Free Weights</span>
+                    <span class="popup"><strong>Free Weight Area</strong>Dumbbells, benches, and open upper-body work.</span>
+                </a>
+                <a href="#weights-profile" class="map-marker training" id="marker-weights" aria-label="Basketball court reference location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Basketball Court</span>
+                    <span class="popup"><strong>Basketball Court</strong>Reference point beside the left-side rooms on the gym map.</span>
+                </a>
+                <a href="#cable-profile" class="map-marker training" id="marker-cable" aria-label="Cable machine location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Cable</span>
+                    <span class="popup"><strong>Cable Machine</strong>Controlled isolation and angle work.</span>
+                </a>
+                <a href="#cardio-profile" class="map-marker training" id="marker-cardio" aria-label="Cardio area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Cardio</span>
+                    <span class="popup"><strong>Cardio Area</strong>Treadmills, ellipticals, and StairMasters.</span>
+                </a>
+                <a href="#pump-profile" class="map-marker pump" id="marker-preacher" aria-label="Preacher curl area">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M34 10L18 36h12l-2 18 18-28H34z"/>
+                        </svg>
+                    </span><span class="marker-label">Preacher Curl</span>
+                    <span class="popup"><strong>Preacher Curl</strong>Arm-focused machine work and high-rep finishers.</span>
+                </a>
+                <a href="#recovery-profile" class="map-marker support" id="marker-grass" aria-label="Stretching area location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <rect x="18" y="16" width="28" height="36" rx="4" ry="4"/>
+                            <path d="M28 12h8a4 4 0 0 1 4 4v4H24v-4a4 4 0 0 1 4-4z"/>
+                            <path d="M32 26v14"/><path d="M25 33h14"/>
+                        </svg>
+                    </span><span class="marker-label">Stretch</span>
+                    <span class="popup"><strong>Stretch Area</strong>Fake-grass style strip for warmups, abs, and mobility work.</span>
+                </a>
+                <a href="#scale-profile" class="map-marker support" id="marker-scale" aria-label="Scale station location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <rect x="18" y="16" width="28" height="36" rx="4" ry="4"/>
+                            <path d="M28 12h8a4 4 0 0 1 4 4v4H24v-4a4 4 0 0 1 4-4z"/>
+                            <path d="M32 26v14"/><path d="M25 33h14"/>
+                        </svg>
+                    </span><span class="marker-label">Scale</span>
+                    <span class="popup"><strong>Scale Station</strong>Body-weight tracking checkpoint.</span>
+                </a>
+                <a href="#recovery-profile" class="map-marker support" id="marker-recovery" aria-label="Mirror room location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <rect x="18" y="16" width="28" height="36" rx="4" ry="4"/>
+                            <path d="M28 12h8a4 4 0 0 1 4 4v4H24v-4a4 4 0 0 1 4-4z"/>
+                            <path d="M32 26v14"/><path d="M25 33h14"/>
+                        </svg>
+                    </span><span class="marker-label">Mirrors</span>
+                    <span class="popup"><strong>Mirror Room</strong>Recovery, posing checks, and class space.</span>
+                </a>
+                <a href="#pump-profile" class="map-marker pump" id="marker-pump" aria-label="Pump-focused machine area">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M34 10L18 36h12l-2 18 18-28H34z"/>
+                        </svg>
+                    </span><span class="marker-label">Incline Pump</span>
+                    <span class="popup"><strong>Incline Bench Pump</strong>Upper-chest work and press-focused finishing sets.</span>
+                </a>
+                <a href="#cable-profile" class="map-marker training" id="marker-accessory" aria-label="Accessory machine area">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Accessory</span>
+                    <span class="popup"><strong>Accessory Machine Area</strong>Machine lifts that pad out upper-day volume after compounds.</span>
+                </a>
+                <a href="#pump-profile" class="map-marker pump" id="marker-chestfly" aria-label="Chest fly pump area">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M34 10L18 36h12l-2 18 18-28H34z"/>
+                        </svg>
+                    </span><span class="marker-label">Chest Fly</span>
+                    <span class="popup"><strong>Chest Fly Pump</strong>Isolation work for stretch, squeeze, and end-of-session chest volume.</span>
+                </a>
+                <a href="#juice-profile" class="map-marker support" id="marker-juicebar" aria-label="Juice bar location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <rect x="18" y="16" width="28" height="36" rx="4" ry="4"/>
+                            <path d="M28 12h8a4 4 0 0 1 4 4v4H24v-4a4 4 0 0 1 4-4z"/>
+                            <path d="M32 26v14"/><path d="M25 33h14"/>
+                        </svg>
+                    </span><span class="marker-label">Juice</span>
+                    <span class="popup"><strong>Juice Bar</strong>Protein shakes and post-workout snacks.</span>
+                </a>
+                <span class="map-marker training map-static-marker" id="marker-tennis" aria-label="Tennis court room location">
+                    <span class="marker-icon" aria-hidden="true">
+                        <svg class="category-icon" viewBox="0 0 64 64">
+                            <path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/>
+                        </svg>
+                    </span><span class="marker-label">Tennis Court Room</span>
+                    <span class="popup"><strong>Tennis Court Room</strong>This lower room marks the tennis court wing. The rooms above it are also tennis court rooms.</span>
+                </span>
+            </div>
+
+            <div class="map-legend">
+                <h3>Map Legend</h3>
+                <p><span class="legend training-key" aria-hidden="true"><svg class="category-icon" viewBox="0 0 64 64"><path d="M10 24v16"/><path d="M16 20v24"/><path d="M22 26v12"/><path d="M22 32h20"/><path d="M42 26v12"/><path d="M48 20v24"/><path d="M54 24v16"/></svg></span> Barbell = Training Area</p>
+                <p><span class="legend support-key" aria-hidden="true"><svg class="category-icon" viewBox="0 0 64 64"><rect x="18" y="16" width="28" height="36" rx="4" ry="4"/><path d="M28 12h8a4 4 0 0 1 4 4v4H24v-4a4 4 0 0 1 4-4z"/><path d="M32 26v14"/><path d="M25 33h14"/></svg></span> Clipboard = Support / Utility Area</p>
+                <p><span class="legend pump-key" aria-hidden="true"><svg class="category-icon" viewBox="0 0 64 64"><path d="M34 10L18 36h12l-2 18 18-28H34z"/></svg></span> Bolt = Pump-Focused Area</p>
+            </div>
+            <div class="map-credits">
+                <h3>Map Credits</h3>
+                <p>
+                    Map image and location photos come from the project archive. Future updates should replace
+                    reused location photos with new photos of the cable machine, cardio area, mirror room, and juice bar.
+                </p>
+            </div>
+        </section>
+
+        <section class="location-profiles">
+            <div class="section-header">
+                <h2>Location Profiles</h2>
+                <p>
+                    Each profile combines a view of the location with practical notes and a bodybuilding value rating.
+                </p>
+            </div>
+
+            <article id="squat-profile" class="profile-card">
+                <h3>Squat Rack</h3>
+                <img src="images/squatrack.jpg" alt="Squat rack area in the gym">
+                <p>The squat rack anchors lower-body training and supports heavy compound work with repeatable setup.</p>
+                <p class="rating-icons" aria-label="5 out of 5 dog icons">&#128054;&#128054;&#128054;&#128054;&#128054;</p>
+            </article>
+
+            <article id="bench-profile" class="profile-card">
+                <h3>Bench Area</h3>
+                <img src="images/bench1.jpg" alt="Bench press area in the gym">
+                <p>The bench area is central for chest development, pressing strength, and consistent upper-body work.</p>
+                <p class="rating-icons" aria-label="5 out of 5 dog icons">&#128054;&#128054;&#128054;&#128054;&#128054;</p>
+            </article>
+
+            <article id="weights-profile" class="profile-card">
+                <h3>Free Weights</h3>
+                <img src="images/weights.jpg" alt="Free weights and plates in the gym">
+                <p>Free weights support accessory lifts, rows, presses, and movement variety outside the main rack stations.</p>
+                <p class="rating-icons" aria-label="4 out of 5 dog icons">&#128054;&#128054;&#128054;&#128054;&#9734;</p>
+            </article>
+
+            <article id="cable-profile" class="profile-card">
+                <h3>Cable Machine</h3>
+                <img src="images/weightballs.jpg" alt="Strength equipment stand-in for the cable machine">
+                <p>Cables help target muscles from different angles and keep tension steady during isolation work.</p>
+                <p class="rating-icons" aria-label="4 out of 5 dog icons">&#128054;&#128054;&#128054;&#128054;&#9734;</p>
+            </article>
+
+            <article id="cardio-profile" class="profile-card">
+                <h3>Cardio Area</h3>
+                <img src="images/stairmaster.jpg" alt="StairMaster representing the cardio area">
+                <p>Cardio equipment becomes especially important during cutting phases and recovery-aware programming.</p>
+                <p class="rating-icons" aria-label="3 out of 5 dog icons">&#128054;&#128054;&#128054;&#9734;&#9734;</p>
+            </article>
+
+            <article id="scale-profile" class="profile-card">
+                <h3>Scale Station</h3>
+                <img src="images/scale.jpg" alt="Scale station in the gym">
+                <p>The scale turns progress into trend data, especially during bulks, cuts, and maintenance phases.</p>
+                <p class="rating-icons" aria-label="4 out of 5 dog icons">&#128054;&#128054;&#128054;&#128054;&#9734;</p>
+            </article>
+
+            <article id="recovery-profile" class="profile-card">
+                <h3>Recovery And Mirror Space</h3>
+                <img class="profile-image-contain" src="images/routine.PNG" alt="Routine chart representing recovery and planning">
+                <p>This support space stands for warmups, posing checks, mobility, and planning between hard sessions.</p>
+                <p class="rating-icons" aria-label="3 out of 5 dog icons">&#128054;&#128054;&#128054;&#9734;&#9734;</p>
+            </article>
+
+            <article id="pump-profile" class="profile-card">
+                <h3>Pump Zone</h3>
+                <img src="images/leaderboard1.jpg" alt="Gym leaderboard standing in for the pump-focused training area">
+                <p>The pump zone represents high-rep accessory work where machines and cables finish the session.</p>
+                <p class="rating-icons" aria-label="4 out of 5 dog icons">&#128054;&#128054;&#128054;&#128054;&#9734;</p>
+            </article>
+
+            <article id="juice-profile" class="profile-card">
+                <h3>Juice Bar</h3>
+                <img src="images/gymdog.jpg" alt="Stand-in image for the juice bar profile until a real photo is added">
+                <p>The juice bar is a post-workout support stop and the final scene of the visual essay.</p>
+                <p class="rating-icons" aria-label="3 out of 5 dog icons">&#128054;&#128054;&#128054;&#9734;&#9734;</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Lifter Association by Marcos Sanchez.</p>
+        <p>Personal and non-commercial use is allowed with credit. Commercial reuse, republication, or alteration requires permission.</p>
+    </footer>
+</body>
+</html>
+
