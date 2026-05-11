@@ -258,6 +258,19 @@ main,
     background: #ece4d5;
 }
 
+.review-main img.review-image-contain {
+    object-fit: contain;
+    background: transparent;
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-main img.review-image-tall {
+    max-height: 500px;
+}
+
 .review-meta {
     margin-top: -6px;
     color: #5a4634;
@@ -296,6 +309,10 @@ main,
     gap: 18px;
 }
 
+.equipment-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .gallery-item {
     margin: 0;
     padding: 14px;
@@ -305,7 +322,7 @@ main,
 
 .gallery-item img {
     width: 100%;
-    height: 210px;
+    height: 230px;
     object-fit: cover;
     display: block;
     margin-bottom: 10px;
@@ -317,6 +334,14 @@ main,
 .gallery-item img.gallery-image-contain {
     object-fit: contain;
     padding: 8px;
+}
+
+.equipment-gallery .gallery-item img {
+    height: 300px;
+}
+
+.equipment-gallery .gallery-item img.equipment-photo-tall {
+    height: 340px;
 }
 
 .gallery-item img.leaderboard-zoom {
@@ -513,6 +538,7 @@ th {
 #marker-bench { top: 27%; left: 55%; }
 #marker-weights { top: 18%; left: 6%; }
 #marker-cable { bottom: 39%; left: 62%; }
+#marker-dip { top: 34%; left: 10%; }
 #marker-cardio { top: 56%; left: 39%; }
 #marker-preacher { top: 4%; left: 35%; }
 #marker-grass { bottom: 26%; left: 31%; }
